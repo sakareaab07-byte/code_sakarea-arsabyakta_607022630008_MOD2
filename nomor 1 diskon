@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float belanja, persenDiskon, hemat, totalBayar;
+
+    cout << "Masukkan total belanja: ";
+    cin >> belanja;
+
+    if (belanja >= 500000) {
+        persenDiskon = 20;
+    }
+    else if (belanja >= 100000) {
+        persenDiskon = 10;
+    }
+    else {
+        persenDiskon = 0;
+    }
+
+    hemat  = belanja * persenDiskon / 100;
+    totalBayar = belanja - hemat;
+
+    cout << "Diskon: " << persenDiskon << "%" << endl;
+    cout << "Hemat: Rp" << hemat << endl;
+    cout << "Total bayar: Rp" << totalBayar;
+
+    return 0;
+}
