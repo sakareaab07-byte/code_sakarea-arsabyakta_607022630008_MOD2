@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int minuman;
+    float uang, harga;
+
+    cout << "Pilihan minuman\n";
+    cout << "1. Minuman A = 5000\n";
+    cout << "2. Minuman B = 7000\n";
+    cout << "3. Minuman C = 10000\n";
+
+    cout << "Pilih minuman = ";
+    cin >> minuman;
+
+    cout << "Masukan uang maneh = ";
+    cin >> uang;
+
+    switch (minuman) {
+        case 1:
+            harga = 5000;
+            break;
+
+        case 2:
+            harga = 7000;
+            break;
+
+        case 3:
+            harga = 10000;
+            break;
+
+        default:
+            cout << "Engga ada minuman itu";
+            return 0;
+    }
+
+    if (uang < harga) {
+        cout << "kurang begoo";
+    }
+    else {
+        cout << "Minuman dibeli\n";
+        cout << "Kembalian = " << uang - harga;
+    }
+
+    return 0;
+}
